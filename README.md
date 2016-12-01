@@ -23,7 +23,7 @@ Based on this, we believe that it will become the most popular science formula a
 	* CoreText
 	* UIKit
 	* [SDWebImage](https://github.com/rs/SDWebImage)
-	* [AFNetworking](https://github.com/ibireme/YYText)
+	* [AFNetworking](https://github.com/AFNetworking/AFNetworking)
 	* [YYText](https://github.com/ibireme/YYText)
 4. Import `MathSubjectView.h`.
 5. Initialization of an instance object, and give the `testStr` attribute assignment, where the object will be copied to the mixture of arbitrary science formulas and pictures of the string.
