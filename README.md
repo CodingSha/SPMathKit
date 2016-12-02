@@ -14,6 +14,7 @@ Based on this, we believe that it will become the most popular science formula a
 * Very simple code
 * Fast integration
 * Minimal dependency Library
+
 [KaTeX and MathJax Comparison Demo](http://www.intmath.com/cg5/katex-mathjax-comparison.php)
 ##Usage
 
