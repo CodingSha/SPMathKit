@@ -16,6 +16,15 @@ Based on this, we believe that it will become the most popular science formula a
 * Minimal dependency Library
 
 [KaTeX and MathJax Comparison Demo](http://www.intmath.com/cg5/katex-mathjax-comparison.php)
+
+Time to process page with Katex = `80~100 ms`
+
+Time to process page with MathJax = `900~2000 ms`
+
+This shows that Katex faster than MathJax `10 times to 20 times`
+
+And MathKit is `based on the Katex` engine to achieve
+
 ##Usage
 
 1. Download all the files in the MathKit subdirectory.
