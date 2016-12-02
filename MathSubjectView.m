@@ -60,8 +60,8 @@
     NSMutableArray *arrNew = [NSMutableArray arrayWithArray:arr];
     for (NSInteger i = 0; i < arr.count; i ++) {
         NSString *str = arr[i];
-        if ([str hasPrefix:@"math>"]) {
-            NSArray *arr_t = [str componentsSeparatedByString:@">"];
+        if ([str hasPrefix:@"math#"]) {
+            NSArray *arr_t = [str componentsSeparatedByString:@"#"];
             __block MathView *math = [[MathView alloc]initWithRenderCompleted:^(CGRect frame,NSInteger index) {
                 MathModel *model = [[MathModel alloc]init];
                 model.mathView = math;
@@ -72,13 +72,13 @@
             } withCode:arr_t[1] Index:i];
             math.ratio = 0.6;
             [self addSubview:math];
-        }else if([str hasPrefix:@"image>"]){
-             NSArray *arr_m = [str componentsSeparatedByString:@">"];
+        }else if([str hasPrefix:@"image#"]){
+             NSArray *arr_m = [str componentsSeparatedByString:@"#"];
             [[SDWebImageManager sharedManager] downloadImageWithURL:[NSURL URLWithString:arr_m[1]] options:SDWebImageLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize) {
             } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                 UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
                 imageView.frame = CGRectMake(0, 0, image.size.width/3, image.size.height/3);
-                NSUInteger imageIndex = [arr indexOfObject:[NSString stringWithFormat:@"image>%@",imageURL.absoluteString]];
+                NSUInteger imageIndex = [arr indexOfObject:[NSString stringWithFormat:@"image#%@",imageURL.absoluteString]];
                 [arrNew replaceObjectAtIndex:imageIndex withObject:imageView];
                 self.renderCount ++;
                 [self typesetWithOriArr:arr andMultiArr:arrNew];
@@ -97,13 +97,13 @@
  @return 数据源数组
  */
 - (NSArray *)parserString:(NSString *)str{
-    NSArray *arr = [str componentsSeparatedByString:@"<"];
+    NSArray *arr = [str componentsSeparatedByString:@"@"];
     NSLog(@"%@",arr);
     NSMutableArray *newArr = [NSMutableArray arrayWithArray:arr];
     for (NSInteger i = 0; i < newArr.count; i ++) {
-        if ([newArr[i] hasPrefix:@"/math>"]||[newArr[i] hasPrefix:@"/image>"]) {
-            NSString *newStr = [newArr[i] stringByReplacingOccurrencesOfString:@"/math>" withString:@""];
-            NSString *newStr1 = [newStr stringByReplacingOccurrencesOfString:@"/image>" withString:@""];
+        if ([newArr[i] hasPrefix:@"/math#"]||[newArr[i] hasPrefix:@"/image#"]) {
+            NSString *newStr = [newArr[i] stringByReplacingOccurrencesOfString:@"/math#" withString:@""];
+            NSString *newStr1 = [newStr stringByReplacingOccurrencesOfString:@"/image#" withString:@""];
             [newArr replaceObjectAtIndex:i withObject:newStr1];
         }
     }
