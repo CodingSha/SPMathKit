@@ -37,7 +37,7 @@ And MathKit is `based on the Katex` engine to achieve
 	* [YYText](https://github.com/ibireme/YYText)
 4. Import `MathSubjectView.h`.
 5. Initialization of an instance object, and give the `testStr` attribute assignment, where the object will be copied to the mixture of arbitrary science formulas and pictures of the string.
-Note: Here's the formula in the string need to use a tag similar to `<math></math>` wrapped up, and the picture will need to use a tag similar to `<image></image>` wrapped up, so as to be recognized
+Note: Here's the formula in the string need to use a tag similar to `@math#...@/math#` wrapped up, and the picture will need to use a tag similar to `@image#...@/image#` wrapped up, so as to be recognized
 6. Add the instance object to your view.
 
 If you still do not know how to use it, then download the code to see it, the package has my prepared sample demo.
