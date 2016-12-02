@@ -98,7 +98,6 @@
  */
 - (NSArray *)parserString:(NSString *)str{
     NSArray *arr = [str componentsSeparatedByString:@"@"];
-    NSLog(@"%@",arr);
     NSMutableArray *newArr = [NSMutableArray arrayWithArray:arr];
     for (NSInteger i = 0; i < newArr.count; i ++) {
         if ([newArr[i] hasPrefix:@"/math#"]||[newArr[i] hasPrefix:@"/image#"]) {
