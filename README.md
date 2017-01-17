@@ -1,4 +1,8 @@
 #MathKit
+###What's New?
+
+* Support new codeType ,MathML code had been supported!!! MathML code is WebKit supported code,is so easy to render math code!!! Now,you can easy to build your app with MathKit to render math code with two easy-ways.
+
 ##What MathKit can do?
 
 + It will render you your math, physics, chemistry or any science formula,Geometric graphics and pictures, as well as general text.
@@ -14,6 +18,7 @@ Based on this, we believe that it will become the most popular science formula a
 * Very simple code
 * Fast integration
 * Minimal dependency Library
+* support new codeType MathML
 
 [KaTeX and MathJax Comparison Demo](http://www.intmath.com/cg5/katex-mathjax-comparison.php)
 
