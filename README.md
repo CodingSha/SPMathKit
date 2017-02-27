@@ -48,4 +48,4 @@ Note: Here's the formula in the string need to use a tag similar to `@math#...@/
 If you still do not know how to use it, then download the code to see it, the package has my prepared sample demo.
 
 ##Result
-![Impression Drawing](http://git.oschina.net/uploads/images/2016/1202/102519_afa75c94_1128220.png)
+![img](http://git.oschina.net/uploads/images/2016/1202/102519_afa75c94_1128220.png)
